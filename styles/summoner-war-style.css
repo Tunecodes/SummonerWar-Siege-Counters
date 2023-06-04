@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(22, 22, 22);
+  color: whitesmoke;
+  font-size: 40px;
+  font-style: Arial;
+}
+.image {
+  height: 100px;
+  margin: 20px;
+}
+.mon {
+  margin: 20px;
+  height: 50px;
+  width: 300px;
+  font-size: 30px;
+  
+}
+.button {
+  margin-left: 20px;
+  width: 200px; 
+  height: 50px;
+  font-size: 30px;
+  cursor: pointer;
+}
+.monIcon {
+  margin-left: 20px;
+  padding-right: 30px;
+
+}
+.text {
+  margin-left: 20px;
+}
+.tip {
+  color: darkred;
+  margin-left: 20px;
+}
