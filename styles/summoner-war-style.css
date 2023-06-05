@@ -13,9 +13,11 @@ body {
   height: 50px;
   width: 300px;
   font-size: 30px;
-  
+  border-radius: 10px;
 }
 .button {
+  background-color: green;
+  border-radius: 10px;
   margin-left: 20px;
   width: 200px; 
   height: 50px;
@@ -25,7 +27,7 @@ body {
 .monIcon {
   margin-left: 20px;
   padding-right: 30px;
-
+  border-radius: 50%;
 }
 .text {
   margin-left: 20px;
@@ -33,4 +35,8 @@ body {
 .tip {
   color: darkred;
   margin-left: 20px;
+}
+.title { 
+  margin-left: 20px;
+  margin-top: 20px;
 }
