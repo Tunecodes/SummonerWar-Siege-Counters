@@ -39,6 +39,8 @@ function searchCounter() {
   claraThermarsSavannah(mon1, mon2, mon3);
   louiseMilesCoco(mon1, mon2, mon3);
   odinTesarionRiley(mon1, mon2, mon3);
+  claraVigorFuuki(mon1, mon2, mon3);
+  searaNoraManon(mon1, mon2, mon3);
 
 }
 function hideSecondTeam() {
@@ -243,6 +245,50 @@ function odinTesarionRiley(mon1, mon2, mon3) {
 
         let tip = document.getElementById('tip');
         tip.innerHTML = 'KILL TESARION FIRST!!!';
+        hideSecondTeam();
+      }
+    }
+  }
+}
+
+function claraVigorFuuki(mon1, mon2, mon3) {
+  if (mon1 === 'clara' || mon1 === 'vigor' || mon1 === 'fuuki') {
+    if (mon2 === 'clara' || mon2 === 'vigor' || mon2 === 'fuuki') {
+      if (mon3 === 'clara' || mon3 === 'vigor' || mon3 === 'fuuki') {
+
+        enemyMonsterImages(mon1, mon2, mon3);
+
+        img4.src = "monster-images/khmun.png"
+        img5.src = "monster-images/roid.png"
+        img6.src = "monster-images/racuni.png"
+
+        const bring = document.getElementById('bring');
+        bring.innerHTML = 'Bring: khmun, roid, racuni';
+
+        let tip = document.getElementById('tip');
+        tip.innerHTML = 'KILL FUUKI FIRST!!! || Note: can bring high hp% malite instead of roid';
+        hideSecondTeam();
+      }
+    }
+  }
+}
+
+function searaNoraManon(mon1, mon2, mon3) {
+  if (mon1 === 'seara' || mon1 === 'nora' || mon1 === 'manon') {
+    if (mon2 === 'seara' || mon2 === 'nora' || mon2 === 'manon') {
+      if (mon3 === 'seara' || mon3 === 'nora' || mon3 === 'manon') {
+
+        enemyMonsterImages(mon1, mon2, mon3);
+
+        img4.src = "monster-images/dominic.png"
+        img5.src = "monster-images/rina.png"
+        img6.src = "monster-images/riley.png"
+
+        const bring = document.getElementById('bring');
+        bring.innerHTML = 'Bring: dominic, rina, riley';
+
+        let tip = document.getElementById('tip');
+        tip.innerHTML = 'Note: becareful on the buff you use, Nora can kill with dots';
         hideSecondTeam();
       }
     }
