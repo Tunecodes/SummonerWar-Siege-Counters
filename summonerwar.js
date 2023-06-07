@@ -11,6 +11,181 @@ const img7 = document.getElementById('image7');
 const img8 = document.getElementById('image8');
 const img9 = document.getElementById('image9');
 
+
+let names = [
+  "Bellenus",
+  "Camilla",
+  "Chacha",
+  "Chasun",
+  "Clara",
+  "Coco",
+  "Collen",
+  "Covenant",
+  "Diana",
+  "Dominic",
+  "Elucia",
+  "Eshir",
+  "Fran",
+  "Fuuki",
+  "Haegang",
+  "Helena",
+  "Hwadam",
+  "Iunu",
+  "Jeanne",
+  "Khmun",
+  "Kinki",
+  "Konamiya",
+  "Laika",
+  "Leo",
+  "Louise",
+  "lulu",
+  "Malite",
+  "Manon",
+  "Mihyang",
+  "Miles",
+  "Monte",
+  "Nora",
+  "Odin",
+  "Racuni",
+  "Riley",
+  "Rina",
+  "Roid",
+  "Savannah",
+  "Seara",
+  "Tesarion",
+  "Theomars",
+  "Vigor",
+  "Zerath",
+];
+
+let sortedNames = names.sort();
+
+
+
+function auto() {
+  //reference
+  let input = document.getElementById("input1");
+  //Execute function on keyup
+  input.addEventListener("keyup", (e) => {
+    //loop through above array
+    //Initially remove all elements ( so if user erases a letter or adds new letter then clean previous outputs)
+    removeElements();
+    for (let i of sortedNames) {
+      //convert input to lowercase and compare with each string
+      if (
+        i.toLowerCase().startsWith(input.value.toLowerCase()) &&
+        input.value != ""
+      ) {
+        //create li element
+        let listItem = document.createElement("li");
+        //One common class name
+        listItem.classList.add("list-items");
+        listItem.style.cursor = "pointer";
+        listItem.setAttribute("onclick", "displayNames('" + i + "')");
+        //Display matched part in bold
+        let word = "<b>" + i.substr(0, input.value.length) + "</b>";
+        word += i.substr(input.value.length);
+        //display the value in array
+        listItem.innerHTML = word;
+        document.querySelector(".list1").appendChild(listItem);
+      }
+    }
+  });
+}
+function displayNames(value) {
+  input.value = value.toLowerCase();
+  removeElements();
+}
+function removeElements() {
+  //clear all the item
+  let items = document.querySelectorAll(".list-items");
+  items.forEach((item) => {
+    item.remove();
+  });
+}
+input = document.getElementById("input1");
+
+
+
+function auto2() {
+  //reference
+  let input2 = document.getElementById("input2");
+  //Execute function on keyup
+  input2.addEventListener("keyup", (e) => {
+    //loop through above array
+    //Initially remove all elements ( so if user erases a letter or adds new letter then clean previous outputs)
+    removeElements();
+    for (let i of sortedNames) {
+      //convert input2 to lowercase and compare with each string
+      if (
+        i.toLowerCase().startsWith(input2.value.toLowerCase()) &&
+        input2.value != ""
+      ) {
+        //create li element
+        let listItem = document.createElement("li");
+        //One common class name
+        listItem.classList.add("list-items");
+        listItem.style.cursor = "pointer";
+        listItem.setAttribute("onclick", "displayNames2('" + i + "')");
+        //Display matched part in bold
+        let word = "<b>" + i.substr(0, input2.value.length) + "</b>";
+        word += i.substr(input2.value.length);
+        //display the value in array
+        listItem.innerHTML = word;
+        document.querySelector(".list2").appendChild(listItem);
+      }
+    }
+  });
+}
+function displayNames2(value) {
+  input2.value = value.toLowerCase();
+  removeElements();
+}
+function removeElements() {
+  let items = document.querySelectorAll(".list-items");
+  items.forEach((item) => {
+    item.remove();
+  });
+}
+input2 = document.getElementById("input2");
+
+
+
+function auto3() {
+  let input3 = document.getElementById("input3");
+  input3.addEventListener("keyup", (e) => {
+    removeElements();
+    for (let i of sortedNames) {
+      if (
+        i.toLowerCase().startsWith(input3.value.toLowerCase()) &&
+        input3.value != ""
+      ) {
+        let listItem = document.createElement("li");
+        listItem.classList.add("list-items");
+        listItem.style.cursor = "pointer";
+        listItem.setAttribute("onclick", "displayNames3('" + i + "')");
+        let word = "<b>" + i.substr(0, input3.value.length) + "</b>";
+        word += i.substr(input3.value.length);
+        listItem.innerHTML = word;
+        document.querySelector(".list3").appendChild(listItem);
+      }
+    }
+  });
+}
+function displayNames3(value) {
+  input3.value = value.toLowerCase();
+  removeElements();
+}
+function removeElements() {
+  let items = document.querySelectorAll(".list-items");
+  items.forEach((item) => {
+    item.remove();
+  });
+}
+let input3 = document.getElementById("input3");
+
+
+
 function searchCounter() {
 
   const monster1 = document.querySelector('.mon1')
@@ -30,31 +205,46 @@ function searchCounter() {
     monster3.value = '';
   }, 2000)
 
-  claraThermarsAnyMonster(mon1, mon2, mon3)
 
+  claraTheomarsAnyMonster(mon1, mon2, mon3)
+ 
   claraZerathSavannah(mon1, mon2, mon3);
   mihyangMonteKinki(mon1, mon2, mon3);
   claraMonteIunu(mon1, mon2, mon3);
   claraEshirMonte(mon1, mon2, mon3);
-  claraThermarsSavannah(mon1, mon2, mon3);
+  claraTheomarsSavannah(mon1, mon2, mon3);
   louiseMilesCoco(mon1, mon2, mon3);
   odinTesarionRiley(mon1, mon2, mon3);
   claraVigorFuuki(mon1, mon2, mon3);
   searaNoraManon(mon1, mon2, mon3);
+  claraVigorKinki(mon1, mon2, mon3);
+
 
 }
-function hideSecondTeam() {
-  const element = document.getElementById('counter-team2');
+
+
+function hideAllTeam() {
+  const element = document.getElementById('counter-team');
+  const element2 = document.getElementById('counter-team2');
   const or = document.getElementById('or');
   or.style.display = 'none';
+  element2.style.display = 'none';
   element.style.display = 'none';
+
+}
+
+function hideSecondTeam() {
+  const element2 = document.getElementById('counter-team2');
+  const or = document.getElementById('or');
+  or.style.display = 'none';
+  element2.style.display = 'none';
 }
 
 function showSecondTeam() {
-  const element = document.getElementById('counter-team2');
+  const element2 = document.getElementById('counter-team2');
   const or = document.getElementById('or');
   or.style.display = 'block';
-  element.style.display = 'block';
+  element2.style.display = 'block';
 
 }
 
@@ -153,7 +343,7 @@ function claraEshirMonte(mon1, mon2, mon3) {
   }
 }
 
-function claraThermarsSavannah(mon1, mon2, mon3) {
+function claraTheomarsSavannah(mon1, mon2, mon3) {
   if (mon1 === 'clara' || mon1 === 'theomars' || mon1 === 'savannah') {
     if (mon2 === 'clara' || mon2 === 'theomars' || mon2 === 'savannah') {
       if (mon3 === 'clara' || mon3 === 'theomars' || mon3 === 'savannah') {
@@ -178,13 +368,12 @@ function claraThermarsSavannah(mon1, mon2, mon3) {
 
         let tip = document.getElementById('tip');
         tip.innerHTML = 'Note: for tesarion, chacha, camilla team, kill savannah first || for fran, haegang, bellenus team, all monsters should be on will runes';
-
       }
     }
   }
 }
 
-function claraThermarsAnyMonster(mon1, mon2, mon3) {
+function claraTheomarsAnyMonster(mon1, mon2, mon3) {
   if (mon1 === 'clara' || mon1 === 'theomars' || (mon1 !== 'savannah' && mon1 !== '')) {
     if (mon2 === 'clara' || mon2 === 'theomars' || (mon2 !== 'savannah' && mon2 !== '')) {
       if (mon3 === 'clara' || mon3 === 'theomars' || (mon3 !== 'savannah' && mon3 !== '')) {
@@ -290,6 +479,36 @@ function searaNoraManon(mon1, mon2, mon3) {
         let tip = document.getElementById('tip');
         tip.innerHTML = 'Note: becareful on the buff you use, Nora can kill with dots';
         hideSecondTeam();
+      }
+    }
+  }
+}
+
+function claraVigorKinki(mon1, mon2, mon3) {
+  if (mon1 === 'clara' || mon1 === 'vigor' || mon1 === 'kinki') {
+    if (mon2 === 'clara' || mon2 === 'vigor' || mon2 === 'kinki') {
+      if (mon3 === 'clara' || mon3 === 'vigor' || mon3 === 'kinki') {
+
+        showSecondTeam();
+        enemyMonsterImages(mon1, mon2, mon3);
+
+        img4.src = "monster-images/vigor.png"
+        img5.src = "monster-images/elucia.png"
+        img6.src = "monster-images/lulu.png"
+
+        img7.src = "monster-images/khmun.png"
+        img8.src = "monster-images/racuni.png"
+        img9.src = "monster-images/malite.png"
+
+        const bring = document.getElementById('bring');
+        bring.innerHTML = 'Bring: vigor, elucia, lulu';
+        ;
+
+        const or = document.getElementById('or');
+        or.innerHTML = 'Or: khumun, racuni, malite'
+
+        let tip = document.getElementById('tip');
+        tip.innerHTML = 'Note: for tesarion, chacha, camilla team, kill savannah first || for fran, haegang, bellenus team, all monsters should be on will runes';
       }
     }
   }

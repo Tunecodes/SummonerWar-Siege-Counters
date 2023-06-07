@@ -1,42 +1,72 @@
 body {
   background-color: rgb(22, 22, 22);
   color: whitesmoke;
-  font-size: 40px;
+  font-size: 45px;
   font-style: Arial;
 }
+
 .image {
   height: 100px;
   margin: 20px;
 }
+
 .mon {
   margin: 20px;
   height: 50px;
   width: 300px;
   font-size: 30px;
   border-radius: 10px;
+  border: none;
 }
+
 .button {
   background-color: green;
   border-radius: 10px;
   margin-left: 20px;
-  width: 200px; 
+  width: 200px;
   height: 50px;
   font-size: 30px;
   cursor: pointer;
+  margin-top: 20px;
 }
+
 .monIcon {
   margin-left: 20px;
   padding-right: 30px;
   border-radius: 50%;
 }
+
 .text {
-  margin-left: 20px;
+  margin-left: 10px;
 }
+
 .tip {
   color: darkred;
   margin-left: 20px;
 }
-.title { 
+
+.title {
   margin-left: 20px;
   margin-top: 20px;
+  margin-bottom: -10px;
+}
+
+.list {
+  margin-left: 20px;
+  margin-top: -27px;
+  color: black;
+  max-width: 300px;
+
+/*   width: 25.45%;
+ */  background-color: #ffffff;
+  border-radius: 0 0 5px 5px;
+  font-size: 25px;
+}
+
+.list-items {
+  padding: 10px 5px;
+}
+
+.list-items:hover {
+  background-color: #dddddd;
 }

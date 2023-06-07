@@ -6,26 +6,36 @@
   <link rel="stylesheet" href="styles/summoner-war-style.css">
 
 </head>
- <p class="title"> Summoner War Siege Counters</p>
+<p class="title"> Summoner War Siege Counters</p>
 
 <body>
 
-  <div>
-    <input placeholder="monster 1" class="mon mon1">
-    <input placeholder="monster 2" class="mon mon2">
-    <input placeholder="monster 3" class="mon mon3">
+    <div>
+      <input placeholder="monster 1" class="mon mon1" id="input1" onkeypress="auto()"">
+      <div class=" list list1"></div>
   </div>
+
+  <div>
+    <input placeholder="monster 2" class="mon mon2" id="input2" onclick="auto2()">
+    <div class="list list2"></div>
+  </div>
+
+  <div>
+    <input placeholder="monster 3" class="mon mon3" id="input3" onclick="auto3()">
+    <div class=" list list3"></div>
+  </div>
+
   <button class="button" onclick="searchCounter()
   ">Search</button>
 
   <p class="text" id="against"></p>
-  <div id="tom">
+  <div id="enemy-team">
     <img class="monIcon" id="image">
     <img class="monIcon" id="image2">
     <img class="monIcon" id="image3">
   </div>
   <p class="text" id="bring"></p>
-  <div id="bob">
+  <div id="counter-team">
     <img class="monIcon" id="image4">
     <img class="monIcon" id="image5">
     <img class="monIcon" id="image6">
