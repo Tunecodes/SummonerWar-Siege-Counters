@@ -492,8 +492,8 @@ function claraVigorKinki(mon1, mon2, mon3) {
         showSecondTeam();
         enemyMonsterImages(mon1, mon2, mon3);
 
-        img4.src = "monster-images/vigor.png"
-        img5.src = "monster-images/elucia.png"
+        img4.src = "monster-images/elucia.png"
+        img5.src = "monster-images/vigor.png"
         img6.src = "monster-images/lulu.png"
 
         img7.src = "monster-images/khmun.png"
@@ -508,7 +508,7 @@ function claraVigorKinki(mon1, mon2, mon3) {
         or.innerHTML = 'Or: khumun, racuni, malite'
 
         let tip = document.getElementById('tip');
-        tip.innerHTML = 'Note: for tesarion, chacha, camilla team, kill savannah first || for fran, haegang, bellenus team, all monsters should be on will runes';
+        tip.innerHTML = 'Note: use elucia lead if not 100% resistance and kill clara first'
       }
     }
   }
