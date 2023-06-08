@@ -328,7 +328,7 @@ function claraEshirMonte(mon1, mon2, mon3) {
         enemyMonsterImages(mon1, mon2, mon3);
 
         img4.src = "monster-images/khmun.png"
-        img5.src = "monster-images/Racuni.png"
+        img5.src = "monster-images/racuni.png"
         img6.src = "monster-images/hwadam.png"
 
         const bring = document.getElementById('bring');
